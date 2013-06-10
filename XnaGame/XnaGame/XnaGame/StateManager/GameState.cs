@@ -32,10 +32,24 @@ namespace XnaGame.StateManager {
         protected Game1 GameRef;
 
         /// <summary>
+        /// Determines if the screen currently has focus.
+        /// Update the inputs if screen has focus.
+        /// </summary>
+        private bool hasFocus;
+
+        /// <summary>
         /// Get state reference of self
         /// </summary>
         public GameState StateRef {
             get { return stateRef; }
+        }
+
+        /// <summary>
+        /// get set hasfocus
+        /// </summary>
+        public bool HasFocus {
+            get { return hasFocus; }
+            set { hasFocus = value; }
         }
 
         /// <summary>

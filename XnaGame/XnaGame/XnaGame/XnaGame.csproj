@@ -107,6 +107,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character\BaseCharacter.cs" />
+    <Compile Include="Character\BattleCharacter.cs" />
+    <Compile Include="Character\CurrentMaxValue.cs" />
+    <Compile Include="Character\StatData.cs" />
     <Compile Include="GameScreen\BattleScreen.cs" />
     <Compile Include="GameScreen\TitleScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

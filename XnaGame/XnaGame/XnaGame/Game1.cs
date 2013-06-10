@@ -23,8 +23,8 @@ namespace XnaGame {
         private GameStateManager stateManager;
 
         // screen resolution
-        private const int WIDTH = 1280;
-        private const int HEIGHT = 720;
+        private const int WIDTH = 800;
+        private const int HEIGHT = 600;
 
         public SpriteBatch SpriteBatch;
         public readonly Rectangle ScreenRectangle;

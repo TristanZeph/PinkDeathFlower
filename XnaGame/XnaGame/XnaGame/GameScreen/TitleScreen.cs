@@ -40,7 +40,7 @@ namespace XnaGame.GameScreen {
 
             //creates startbutton
             startButton = new Button();
-            startButton.Position = new Vector2(350, 600);
+            startButton.Position = new Vector2(100, 300);
             startButton.Text = "Test Battle System";
             startButton.TabStop = true;
             startButton.HasFocus = true;
@@ -54,6 +54,8 @@ namespace XnaGame.GameScreen {
         /// </summary>
         /// <param name="gameTime">snapshot of the current time</param>
         public override void Update(GameTime gameTime) {
+            if (!HasFocus) return;
+
             // exits the game when exitKey released
             if (Input.IsKeyReleased(Input.ExitKey)) {
                 GameRef.Exit();

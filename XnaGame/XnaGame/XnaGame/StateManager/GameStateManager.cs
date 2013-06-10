@@ -43,8 +43,10 @@ namespace XnaGame.StateManager {
         public void PopState() {
             if (gameStates.Count > 0) {
                 GameState state = gameStates.Peek();
+                state.HasFocus = false;
                 Game.Components.Remove(state);
                 gameStates.Pop();
+                gameStates.Peek().HasFocus = true;
             }
         }
 
@@ -54,8 +56,12 @@ namespace XnaGame.StateManager {
         /// </summary>
         /// <param name="newState">GameState to be added</param>
         public void PushState(GameState newState) {
+            if (gameStates.Count > 0)
+                gameStates.Peek().HasFocus = false;
+
             gameStates.Push(newState);
             Game.Components.Add(newState);
+            gameStates.Peek().HasFocus = true;
         }
 
         /// <summary>
